@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+int main() 
+{
+int i, j, k, m, a;
+  std::cout << "輸入金字塔層數(需介於1到8) : ";
+  Digit_check:
+  std::cin >> k;                    
+    if (k>8) {                   
+    cout << "輸入錯誤,請輸入金字塔層數(需介於1到8) :";
+    goto Digit_check;
+    }
+    if (k<1) {                   
+    cout << "輸入錯誤,請輸入金字塔層數(需介於1到8) :";
+    goto Digit_check;
+    }
+  
+  for (i=0; i<k ;i++)
+  {
+    for (j=0; j<(k-i-1); j++)
+    {
+      std::cout << " ";
+    }
+    for (m=0; m<(k-j); m++)
+    {
+      std::cout << "#";
+    }
+    for (a=0; a<1; a++)
+    {
+      std::cout << " ";
+    }
+    for (m=0; m<(k-j); m++)
+    {
+      std::cout << "#";
+    }
+    std::cout << "\n";
+}
+}
+
